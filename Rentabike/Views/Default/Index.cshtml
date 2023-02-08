@@ -1,0 +1,100 @@
+﻿@using EntityLayer.Concrete
+@model List<Bike>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="product-area pb-100px">
+    <div class="container">
+        <!-- Section Title & Tab Start -->
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title text-center">
+                    <h2 class="title">New Products</h2>
+                    <p>There are many variations of passages of Lorem Ipsum available</p>
+                </div>
+            </div>
+        </div>
+        <!-- Section Title & Tab End -->
+        <div class="row">
+            <div class="col">
+                <div class="row mb-n-30px">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                            <!-- Single Prodect -->
+                            <div class="product">
+                                <div class="thumb">
+                                    <a href="/Default/BikeDetails/@item.BikeId" class="image">
+                                        <img src="~/hmarthtml-10/hmart/assets/images/product-image/@item.Image" alt="Product" />
+                                        <img class="hover-image" src="~/hmarthtml-10/hmart/assets/images/product-image/@item.Image" alt="Product" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <span class="category"><a href="#">Products</a></span>
+                                    <h5 class="title">
+                                        <a href="single-product.html">
+                                            @item.Title
+                                        </a>
+                                    </h5>
+                                    <span class="price">
+                                        <span class="new">$@item.Price</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="feature-area pt-100px pb-100px">
+    <div class="container">
+        <div class="feature-wrapper">
+            <div class="single-feture-col mb-md-30px mb-lm-30px">
+                <!-- single item -->
+                <div class="single-feature">
+                    <div class="feature-icon">
+                        <img src="~/hmarthtml-10/hmart/assets/images/icons/1.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4 class="title">Free Shipping</h4>
+                        <span class="sub-title">Capped at $39 per order</span>
+                    </div>
+                </div>
+            </div>
+            <!-- single item -->
+            <div class="single-feture-col mb-md-30px mb-lm-30px">
+                <div class="single-feature">
+                    <div class="feature-icon">
+                        <img src="~/hmarthtml-10/hmart/assets/images/icons/2.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4 class="title">Card Payments</h4>
+                        <span class="sub-title">12 Months Installments</span>
+                    </div>
+                </div>
+            </div>
+            <!-- single item -->
+            <div class="single-feture-col">
+                <div class="single-feature">
+                    <div class="feature-icon">
+                        <img src="~/hmarthtml-10/hmart/assets/images/icons/3.png" alt="">
+                    </div>
+                    <div class="feature-content">
+                        <h4 class="title">Easy Returns</h4>
+                        <span class="sub-title">Shop With Confidence</span>
+                    </div>
+                </div>
+                <!-- single item -->
+            </div>
+        </div>
+    </div>
+</div>

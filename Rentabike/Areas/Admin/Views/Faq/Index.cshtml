@@ -1,0 +1,44 @@
+﻿@using EntityLayer.Concrete
+@model List<Faq>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>FAQ</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Description</th>
+        <th>Question1</th>
+        <th>Text1</th>
+        <th>Question2</th>
+        <th>Text2</th>
+        <th>Question3</th>
+        <th>Text3</th>
+        <th>Question4</th>
+        <th>Text4</th>
+        <th>Question5</th>
+        <th>Text5</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FaqId</td>
+            <td>@item.Description.Substring(0, 3) ...</td>
+            <td>@item.Question1.Substring(0, 3) ...</td>
+            <td>@item.Text1.Substring(0, 3) ...</td>
+            <td>@item.Question2.Substring(0, 3) ...</td>
+            <td>@item.Text2.Substring(0, 3) ...</td>
+            <td>@item.Question3.Substring(0, 3) ...</td>
+            <td>@item.Text3.Substring(0, 3) ...</td>
+            <td>@item.Question4.Substring(0, 3) ...</td>
+            <td>@item.Text4.Substring(0, 3) ...</td>
+            <td>@item.Question5.Substring(0, 3) ...</td>
+            <td>@item.Text5.Substring(0, 3) ...</td>
+            <td><a href="/Admin/Faq/UpdateFaq/@item.FaqId" class="btn btn-outline-success">Update</a></td>
+        </tr>
+    }
+</table>
+<br />
+

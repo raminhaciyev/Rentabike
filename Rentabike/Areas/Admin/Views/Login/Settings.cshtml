@@ -1,0 +1,24 @@
+﻿@model EntityLayer.Concrete.Login
+
+@{
+    ViewData["Title"] = "Settings";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Update Setings</h1>
+<br />
+<form method="post">
+    @Html.HiddenFor(x => x.LoginId)
+    <div class="form-group">
+        @Html.Label("Usernmae")
+        <input type="text" asp-for="Username" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Password")
+        <input type="password" asp-for="Password" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <button class="btn btn-outline-success">Save</button>
+</form>
+

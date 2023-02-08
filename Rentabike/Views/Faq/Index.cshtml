@@ -1,0 +1,105 @@
+﻿@using EntityLayer.Concrete
+@model List<Faq>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="login-register-area pb-100px pt-100px faq-area">
+        <div class="container">
+            <div class="row">
+                <div class="ml-auto mr-auto col-lg-9">
+                    <div class="checkout-wrapper">
+                        <div class="inner-descripe" data-aos="fade-up" data-aos-delay="200">
+                            <h4 class="title">
+                                Below are frequently asked questions, you may find the answer for yourself
+
+                            </h4>
+
+                            <p>
+                                @item.Description
+                            </p>
+                        </div>
+                        <div id="faq" class="panel-group">
+                            <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="200">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title">
+                                        <span>1 .</span> <a data-bs-toggle="collapse" href="#my-account-1" class="collapsed" aria-expanded="true">
+
+                                            @item.Question1
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="my-account-1" class="panel-collapse collapse show" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        @item.Text1
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="200">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title">
+                                        <span>2 .</span> <a data-bs-toggle="collapse" href="#my-account-2" aria-expanded="false" class="collapsed">
+                                            @item.Question2
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        @item.Text2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="200">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title">
+                                        <span>3 .</span> <a data-bs-toggle="collapse" href="#my-account-3">
+                                            @item.Question3
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        @item.Text3
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="200">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title">
+                                        <span>4 .</span> <a data-bs-toggle="collapse" href="#my-account-4">
+                                            @item.Question4
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="my-account-4" class="panel-collapse collapse" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        @item.Text4
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default single-my-account m-0" data-aos="fade-up" data-aos-delay="200">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title">
+                                        <span>5 .</span> <a data-bs-toggle="collapse" href="#my-account-5">
+                                            @item.Question5
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="my-account-5" class="panel-collapse collapse" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        @item.Text5
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concrete.MessageContact
+@{
+    ViewData["Title"] = "GoToMessage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Client's message from Contact</h1>
+<br />
+<form method="post">
+    @Html.HiddenFor(x => x.MessageId)
+
+    <br />
+    <div class="form-group">
+        @Html.Label("Fullname")
+        @Html.TextBoxFor(x => x.Fullname, new { @class = "form-control", @style = "width:50%", @disabled = "disabled" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Date")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control", @style = "width:50%", @disabled = "disabled" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Email")
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @style = "width:50%", @disabled = "disabled" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Subject")
+        @Html.TextBoxFor(x => x.Subject, new { @class = "form-control", @style = "width:50%", @disabled = "disabled" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Message")
+        @Html.TextAreaFor(x => x.Message, new { @class = "form-control", @style = "width:50%; height:100px", @disabled = "disabled" })
+    </div>
+    <br />
+</form>
+

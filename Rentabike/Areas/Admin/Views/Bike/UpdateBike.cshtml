@@ -1,0 +1,69 @@
+﻿@model EntityLayer.Concrete.Bike
+@{
+    ViewData["Title"] = "UpdateBike";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Update Bike</h1>
+<br />
+<form method="post">
+    @Html.HiddenFor(x => x.BikeId)
+    <div class="form-group">
+        @Html.Label("Title")
+        <input type="text" asp-for="Title" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Status")
+        <input type="text" asp-for="Status" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Price")
+        <input type="text" asp-for="Price" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Category")
+        <input type="text" asp-for="Category" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Dimensions")
+        <input type="text" asp-for="Dimensions" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Material")
+        <input type="text" asp-for="Material" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Weight")
+        <input type="text" asp-for="Weight" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Description")
+        <input type="text" asp-for="Description" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Rules")
+        <input type="text" asp-for="Rules" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Requirements")
+        <input type="text" asp-for="Requirements" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Image")
+        <input type="text" asp-for="Image" class="form-control" style="width:50%" />
+    </div>
+    <br />
+    <button class="btn btn-outline-success">Save</button>
+</form>
+
+

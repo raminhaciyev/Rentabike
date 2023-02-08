@@ -1,0 +1,27 @@
+﻿@using EntityLayer.Concrete
+@model List<Login>
+
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Home</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Update Password and Username</th>
+      
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.LoginId</td>
+            <td>@item.Username</td>
+            <td><a href="/Admin/Login/Settings/@item.LoginId" class="btn btn-outline-success">Update</a></td>
+        </tr>
+    }
+</table>
+
+

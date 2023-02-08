@@ -1,0 +1,32 @@
+﻿
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<EntityLayer.Concrete.MessageContact>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Messages from Contact</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Fullname</th>
+        <th>Date</th>
+        <th>Go to message</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageId</td>
+            <td>@item.Fullname</td>
+            <td>@item.Date</td>
+            <td><a href="/Admin/Message/GoToMessage/@item.MessageId" class="btn btn-outline-primary">Go to Message</a></td>
+        </tr>
+    }
+</table>
+<br />
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new { page }))
+
